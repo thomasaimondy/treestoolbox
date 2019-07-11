@@ -11,7 +11,7 @@ tree = load_tree('NCB8R.CNG.swc');
 tree = repair_tree(tree);
 
 %% process the data
-%sse = sse_tree(tree);
+sse = sse_tree(tree); % sse
 bo = BO_tree(tree);  % branch order
 [bi, bins, bh] = bin_tree(tree,[],4); % bin sets
 b = B_tree(tree)';    % branch points
@@ -19,7 +19,11 @@ asym = asym_tree(tree, T_tree(tree))'; % balanced or not
 t = T_tree(tree); % get the terminal points
 pl = PL_tree(tree); % the topological path length
 lo = LO_tree(tree); % level order values
-% adding more rules here !!!!!!!!
+ipar = ipar_tree(tree); % path to root, parent indices, matrix
+% adding more rules here!!!!!!!!!
+
+
+
 
 
 
