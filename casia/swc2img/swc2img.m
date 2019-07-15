@@ -1,15 +1,15 @@
 for i = 0 : 4
-    file1 = strcat('D:\treestoolbox\swc\',num2str(i));
-    for j = 1 : (length(ls(file1)) - 3)
-        file2 = strcat('D:\treestoolbox\swc\',num2str(i),'\',num2str(j),'.swc');
+    path = strcat('D:\treestoolbox\swc\',num2str(i));
+    for j = 1 : (length(ls(path)) - 3)
+        swcfile = strcat('D:\treestoolbox\swc\',num2str(i),'\',num2str(j),'.swc');
         try
-            tree1 = load_tree(file2);
+            tree = load_tree(swcfile);
             f = figure(j);
-            plot_tree(tree1);
+            plot_tree(tree);
             set(f,'visible','off')
-            file3 = strcat('D:\treestoolbox\img2d\',num2str(i),'\',num2str(j));
+            imgfile = strcat('D:\treestoolbox\img2d\',num2str(i),'\',num2str(j));
             %imwrite(f,file3);
-            saveas(f,file3,'tif')
+            saveas(f,imgfile,'tif')
         end
     end
 end
