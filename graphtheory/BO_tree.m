@@ -76,13 +76,14 @@ if strfind       (options,'-s') % show option
     set          (HP, ...
         'edgecolor',           'none');
     colorbar;
-    title        ('branch order');
-    xlabel       ('x [\mum]');
-    ylabel       ('y [\mum]');
-    zlabel       ('z [\mum]');
+    %title        ('branch order');
+    %xlabel       ('x [\mum]');
+    %ylabel       ('y [\mum]');
+    %zlabel       ('z [\mum]');
     view         (2);
-    grid         on;
+    %grid         on;
     axis         image;
+    axis         off;
 end
 
 

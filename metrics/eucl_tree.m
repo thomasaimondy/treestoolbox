@@ -97,13 +97,14 @@ if strfind       (options, '-s') % show option
     set          (HP, ...
         'edgecolor',           'none');
     colorbar;
-    title        ('euclidean distance [\mum]');
-    xlabel       ('x [\mum]');
-    ylabel       ('y [\mum]'); 
-    zlabel       ('z [\mum]');
+    %title        ('euclidean distance [\mum]');
+    %xlabel       ('x [\mum]');
+    %ylabel       ('y [\mum]'); 
+    %zlabel       ('z [\mum]');
     view         (2);
-    grid         on;
+    %grid         on;
     axis         image;
+    axis off;
 end
 
 
